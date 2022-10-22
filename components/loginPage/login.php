@@ -12,11 +12,11 @@
         <div class="container">
             <div class="box">
                 <div id="div-esquerda">
-                    <form action="" method="post">
+                    <form action="exe/login_exe.php" method="post">
                         <label for="">E-mail</label>
-                        <input class="form_input" type="email" name="email" id="email" placeholder="Digite seu E-mail...">
+                        <input class="form_input" type="email" name="input_email" id="email" placeholder="Digite seu E-mail...">
                         <label for="">Senha</label>
-                        <input class="form_input" type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+                        <input class="form_input" type="password" name="input_senha" id="senha" placeholder="Digite sua senha...">
                         <input id="input-prosseguir" type="submit" value="Logar">
                     </form>
 
