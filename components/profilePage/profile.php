@@ -1,9 +1,9 @@
 <?php
     session_start();
-    function get_data(){
-        if(isset($_SESSION['is_logged'])){
-            $logged_email = $_SESSION['logged_email'];
-            return "$logged_email";
+    function get_data($dataSessionVariable){
+        if( isset($_SESSION['is_logged']) ){
+            $logged_data = $_SESSION[$dataSessionVariable];
+            return "$logged_data";
         }
         else{
             return 'ERRO';
@@ -36,8 +36,8 @@
         <section class="section-principal">
             
             <div class="profile-content">
-                <img src="midia/gbxchad.jpg" alt="GBEX" id="img-profile">
-                <?php echo"<h2 class='text-principal'>" . get_data() . "</h2>" ?>
+            <?php echo"<img src='" . get_data('logged_image') . "' alt='GBEX' id='img-profile'>" ?>
+                <?php echo"<h2 class='text-principal'>" . get_data('logged_email') . "</h2>" ?>
                 <h3 class="text-principal">@diogobonet</h3>
                 <button class="editprofile">Editar Perfil</button>
                 <a href=""><img src="" alt=""></a>
