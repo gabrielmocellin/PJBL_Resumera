@@ -36,7 +36,7 @@
         <section class="section-principal">
             
             <div class="profile-content">
-            <?php echo"<img src='" . get_data('logged_image') . "' alt='GBEX' id='img-profile'>" ?>
+            <?php echo"<img src='" . get_data('logged_image') . "' alt='Imagem do usuário' id='img-profile'>" ?>
                 <?php echo"<h2 class='text-principal'>" . get_data('logged_email') . "</h2>" ?>
                 <h3 class="text-principal">@diogobonet</h3>
                 <button class="editprofile">Editar Perfil</button>
