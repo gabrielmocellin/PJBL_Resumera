@@ -20,16 +20,17 @@
     <title>Edição de Perfil</title>
 </head>
 <body>
-    <form id= 'change_form' action= 'exe/editprofile_exe.php'>
+    <form method= 'POST' id= 'change_form' action= 'exe/editprofile_exe.php' enctype='multipart/form-data'>
         <div id= 'esquerda_div'>
-            <img id= 'profile_img' src=''>
+            <!-- <img id= 'profile_img' src=''> !-->
             <input name= 'change_image_input' type= 'file'>
         </div>
         <div id='direita_div'>
+            <?php echo"<h1>" . get_data('nome') . "</h1>" ?>
             <label>Trocar Nome:</label>
             <input name= 'change_name_input' type= 'text'>
 
-            <input type= 'submit'>
+            <input value= 'update' type= 'submit'>
         </div>
     </form>
     

@@ -39,7 +39,7 @@
             <?php echo"<img src='" . get_data('imagem') . "' alt='Imagem do usuário' id='img-profile'>" ?>
                 <?php echo"<h2 class='text-principal'>" . get_data('nome') . "</h2>" ?>
                 <?php echo"<h3 class='text-principal'>" . get_data('email') . "</h3>" ?>
-                <button class="editprofile">Editar Perfil</button>
+                <button onclick= 'trocarDePagina()' class="editprofile">Editar Perfil</button>
             </div>
 
             <div class="content-principal">
@@ -56,3 +56,10 @@
                 </div>
             </div>
         </section>
+    </main>
+    <script language='JavaScript'>
+        function trocarDePagina(){
+            document.location.href = '../editProfilePage/editprofile.php';
+        }
+    </script>
+</body>
