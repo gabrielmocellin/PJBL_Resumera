@@ -20,7 +20,7 @@
                         <input id="input-prosseguir" type="submit" value="Logar">
                     </form>
 
-                    <p>Ainda não possui uma conta no <strong>Resumera</strong>?<br> <a href="signInPage/cadastro.html">Criar uma conta</a></p>
+                    <p>Ainda não possui uma conta no <strong>Resumera</strong>?<br> <a href="../signInPage/cadastro.php">Criar uma conta</a></p>
                 </div>
                 <div id="div-direita">
                     <img id="img-logo" src="midia/ResumeraLogo3 (1).gif">
