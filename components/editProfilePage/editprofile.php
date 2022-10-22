@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    function get_data($dataSessionVariable){
+        if( $_SESSION['logado'] == true ){
+            $logged_data = $_SESSION[$dataSessionVariable];
+            return "$logged_data";
+        }
+        else{
+            return 'ERRO';
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
