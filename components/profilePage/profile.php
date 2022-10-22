@@ -1,7 +1,7 @@
 <?php
     session_start();
     function get_data($dataSessionVariable){
-        if( isset($_SESSION['is_logged']) ){
+        if( $_SESSION['logado'] == true ){
             $logged_data = $_SESSION[$dataSessionVariable];
             return "$logged_data";
         }
@@ -36,11 +36,10 @@
         <section class="section-principal">
             
             <div class="profile-content">
-            <?php echo"<img src='" . get_data('logged_image') . "' alt='Imagem do usuário' id='img-profile'>" ?>
-                <?php echo"<h2 class='text-principal'>" . get_data('logged_email') . "</h2>" ?>
-                <h3 class="text-principal">@diogobonet</h3>
+            <?php echo"<img src='" . get_data('imagem') . "' alt='Imagem do usuário' id='img-profile'>" ?>
+                <?php echo"<h2 class='text-principal'>" . get_data('nome') . "</h2>" ?>
+                <?php echo"<h3 class='text-principal'>" . get_data('email') . "</h3>" ?>
                 <button class="editprofile">Editar Perfil</button>
-                <a href=""><img src="" alt=""></a>
             </div>
 
             <div class="content-principal">
