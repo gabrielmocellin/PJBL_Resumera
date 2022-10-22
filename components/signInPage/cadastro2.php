@@ -54,4 +54,10 @@
 
 
 <script language= "JavaScript" src="cadastroJavaScript.js"></script>
+
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>  <!-- APIs para máscara -->
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js' ></script>
+<script>
+    $("#input-telefone").mask("(99)99999-9999"); //máscara para telefone ser digitado no formato desejado
+</script>
 </html>
