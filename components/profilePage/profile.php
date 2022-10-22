@@ -1,10 +1,21 @@
+<?php
+    session_start();
+    function get_data(){
+        if(isset($_SESSION['is_logged'])){
+            $logged_email = $_SESSION['logged_email'];
+            return "$logged_email";
+        }
+        else{
+            return 'ERRO';
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil | Resumera</title>
 </head>
 <body>
@@ -26,7 +37,7 @@
             
             <div class="profile-content">
                 <img src="midia/gbxchad.jpg" alt="GBEX" id="img-profile">
-                <h2 class="text-principal">Diogo Sobezak</h2>
+                <?php echo"<h2 class='text-principal'>" . get_data() . "</h2>" ?>
                 <h3 class="text-principal">@diogobonet</h3>
                 <button class="editprofile">Editar Perfil</button>
                 <a href=""><img src="" alt=""></a>

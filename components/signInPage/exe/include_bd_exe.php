@@ -25,6 +25,6 @@
     }
     else{
         //Caso esteja em falta alguma das variáveis necessárias
-        echo"<h1 style='color:red'>ERRO EM ALGUMA COISA KK</h1>";
+        echo"<h1 style='color:red'>Alguma variável não foi inicializada!</h1>";
     }
 ?>
