@@ -15,7 +15,7 @@
 
         if($row['email'] == $email && $row['senha'] == $senha){
 
-            $sql = "SELECT nome, email, senha, imagem, profissao FROM cadastros WHERE email = '$email'";
+            $sql = "SELECT nome, email, senha, imagem, profissao, bio FROM cadastros WHERE email = '$email'";
             
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
@@ -26,9 +26,10 @@
             $_SESSION['email'] = $row['email'];
             $_SESSION['imagem'] = $row['imagem'];
             $_SESSION['profissao'] = $row['profissao'];
+            $_SESSION['bio'] = $row['bio'];
             $_SESSION['logado'] = true;
 
-            header('location: ../../homePage/homepage.php');
+            header('location: ../../home/main.php');
         }
 
         else{
