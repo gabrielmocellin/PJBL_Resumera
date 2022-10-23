@@ -43,12 +43,20 @@
                 <?php echo"<h1 class= 'exibindo'>" . get_data('bio') . "</h1>" ?>
                 <label class= 'label'>Trocar bio:</label>
                 <input class= 'input' name= 'change_bio_input' type= 'text'>
-
+                <br>
+                <a onclick='alerta()'>Desativar minha conta</a>
+                <?php
+                    $erro = isset($_GET["erro"]);
+                    if($erro == 1){
+                        echo "<p style='color:red';>Erro ao desativar sua conta.</p>";
+                    }
+                ?>
+                <br>
                 <input id= 'update' name= 'update' value= 'Update' type= 'submit'>
             </div>
 
         </div>
     </form>
-    
+<script src='../deletarPage/js/script.js'></script>
 </body>
 </html>
