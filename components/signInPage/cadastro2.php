@@ -35,7 +35,7 @@
 
                 <!-- E-Mail -->
                 <label class= "form_label">Telefone:</label>
-                <input class= "form_input" name= "input-telefone" id= "input-telefone" type="text" maxlength="15" placeholder="(XX)XXXXX-XXXX"/>
+                <input class= "form_input" name= "input-telefone" id= "input-telefone" type="text" maxlength="14" placeholder="(XX)XXXXX-XXXX"/>
 
                 <!-- Senha -->
                 <label class= "form_label">Profissão:</label>
@@ -55,9 +55,21 @@
 
 <script language= "JavaScript" src="../.js/cadastroJavaScript.js"></script>
 
-<script language="JavaScript">
-    const input = document.querySelector('input-telefone')
+<script language="JavaScript">  //máscara para o input de telefone 
+    const input = document.querySelector('#input-telefone')
 
-    input.addEventListener('keypress')
+    input.addEventListener('keypress', () => {
+        let inputLength = input.value.length
+
+        if(inputLength == 0){
+            input.value += '('
+        }
+        else if(inputLength == 3){
+            input.value += ')'
+        }
+        else if(inputLength == 9){
+            input.value += '-'
+        }
+    })
 </script>
 </html>
