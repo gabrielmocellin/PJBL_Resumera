@@ -27,11 +27,17 @@
             <input name= 'change_image_input' type= 'file'>
         </div>
         <div id='direita_div'>
-            <?php echo"<h1>" . get_data('nome') . "</h1>" ?>
-            <label>Trocar Nome:</label>
-            <input name= 'change_name_input' type= 'text'>
 
-            <input name= 'update' value= 'update' type= 'submit'>
+            <div id= 'direita_div_topo'>
+                <h1>Edição de Perfil</h1>
+            </div>
+            <div id= 'direita_div_base'>
+                <?php echo"<h1 class= 'exibindo'>" . get_data('nome') . "</h1>" ?>
+                <label class= 'label'>Trocar Nome:</label>
+                <input class= 'input' name= 'change_name_input' type= 'text'>
+                <input name= 'update' value= 'update' type= 'submit'>
+            </div>
+
         </div>
     </form>
     
