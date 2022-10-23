@@ -35,7 +35,7 @@
 
                 <!-- E-Mail -->
                 <label class= "form_label">Telefone:</label>
-                <input class= "form_input" name= "input-telefone" id= "input-telefone" type="text" placeholder="(XX)XXXXX-XXXX"/>
+                <input class= "form_input" name= "input-telefone" id= "input-telefone" type="text" maxlength="15" placeholder="(XX)XXXXX-XXXX"/>
 
                 <!-- Senha -->
                 <label class= "form_label">Profissão:</label>
@@ -53,11 +53,11 @@
 </body>
 
 
-<script language= "JavaScript" src="cadastroJavaScript.js"></script>
+<script language= "JavaScript" src="../.js/cadastroJavaScript.js"></script>
 
-<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>  <!-- APIs para máscara -->
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js' ></script>
-<script>
-    $("#input-telefone").mask("(99)99999-9999"); //máscara para telefone ser digitado no formato desejado
+<script language="JavaScript">
+    const input = document.querySelector('input-telefone')
+
+    input.addEventListener('keypress')
 </script>
 </html>

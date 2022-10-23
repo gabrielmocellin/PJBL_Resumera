@@ -4,7 +4,3 @@ function logar() {
     var senha = document.getElementById('senha').value;
 
 }
-
-function validar() {
-    
-}

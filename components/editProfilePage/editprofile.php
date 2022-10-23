@@ -44,7 +44,7 @@
                 <label class= 'label'>Trocar bio:</label>
                 <input class= 'input' name= 'change_bio_input' type= 'text'>
                 <br>
-                <a onclick='alerta()'>Desativar minha conta</a>
+                <a onclick='confirm_delete()'>Desativar minha conta</a>
                 <?php
                     $erro = isset($_GET["erro"]);
                     if($erro == 1){
