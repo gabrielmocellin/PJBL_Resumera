@@ -41,7 +41,6 @@
                 <?php echo"<h2 class='text-principal'>" . get_data('nome') . "</h2>" ?>
                 <?php echo"<h3 class='text-principal'>" . get_data('email') . "</h3>" ?>
                 <button onclick= 'trocarDePagina()' class="editprofile">Editar Perfil</button>
-                <a href="../deletarPage/deletarConta.php">Desativar minha conta</a>
             </div>
 
             <div class="content-principal">

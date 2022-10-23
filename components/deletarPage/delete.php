@@ -10,6 +10,6 @@
         header ("Location: ../landingPage/index.html");
     }
     else{
-        header ("Location: deletarConta.php?erro=1");
+        header ("Location: ../editProfilePage/editprofile.php?erro=1");
     }
 ?>
