@@ -16,10 +16,12 @@
         $save_profession = $_POST['input-profissao'];
 
         //Salvando no banco de dados todos os dados informados pelo usuário
-        $sql = "INSERT INTO cadastros (nome, email, senha, telefone, profissao, imagem)
-         VALUES ('$save_name', '$save_email', '$save_password', '$save_number', '$save_profession', 'midia\ResumeraLogoPNG.png')";
+        $sql = "INSERT INTO cadastros (nome, email, senha, telefone, profissao)
+         VALUES ('$save_name', '$save_email', '$save_password', '$save_number', '$save_profession')";
 
         $result = $conn->query($sql);
+
+        header('location: ../../loginPage/login.php');
         
 
     }

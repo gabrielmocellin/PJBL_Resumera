@@ -22,7 +22,8 @@
 <body>
     <form method= 'POST' id= 'change_form' action= 'exe/editprofile_exe.php' enctype='multipart/form-data'>
         <div id= 'esquerda_div'>
-            <!-- <img id= 'profile_img' src=''> !-->
+            <!-- COMANDO IMPORTANTÍSSIMO PARA TRAZER IMAGENS EM BLOB PARA O SITE DO BANCO DE DADOS! -->
+            <?php echo "<img id='profile_img' src='data:image;base64,".base64_encode($_SESSION['imagem'])."' alt= 'Foto do usuário'>"; ?>
             <input name= 'change_image_input' type= 'file'>
         </div>
         <div id='direita_div'>
@@ -30,7 +31,7 @@
             <label>Trocar Nome:</label>
             <input name= 'change_name_input' type= 'text'>
 
-            <input value= 'update' type= 'submit'>
+            <input name= 'update' value= 'update' type= 'submit'>
         </div>
     </form>
     
