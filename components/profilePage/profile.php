@@ -36,7 +36,8 @@
         <section class="section-principal">
             
             <div class="profile-content">
-            <?php echo"<img src='" . get_data('imagem') . "' alt='Imagem do usuário' id='img-profile'>" ?>
+                <!-- COMANDO IMPORTANTÍSSIMO PARA TRAZER IMAGENS EM BLOB PARA O SITE DO BANCO DE DADOS! -->
+                <?php echo "<img id='img-profile' src='data:image;base64,".base64_encode($_SESSION['imagem'])."' alt= 'Foto do usuário'>"; ?>
                 <?php echo"<h2 class='text-principal'>" . get_data('nome') . "</h2>" ?>
                 <?php echo"<h3 class='text-principal'>" . get_data('email') . "</h3>" ?>
                 <button onclick= 'trocarDePagina()' class="editprofile">Editar Perfil</button>

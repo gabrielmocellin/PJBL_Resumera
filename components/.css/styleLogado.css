@@ -10,8 +10,8 @@ font-family: 'Roboto', sans-serif; // Sistema
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(to right,#5981ca, rgb(131, 149, 209));
+    height:100vh; width:100vw;
+    background-image: linear-gradient(to right, #5981ca, rgb(131, 149, 209));
 }
 
 /*---------------------------------------- HEADER ---------------------------------------- */
