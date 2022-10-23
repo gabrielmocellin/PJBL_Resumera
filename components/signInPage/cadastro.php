@@ -33,6 +33,7 @@
                 
                 <!-- Botão -->
                 <input id= "input-prosseguir" type="button" value="Prosseguir" onclick="register_first_part()">
+                <p>Já possui uma conta?<br> <a href="../loginPage/login.php">Logar-se</a></p>
                 
             </form>
         </div>
