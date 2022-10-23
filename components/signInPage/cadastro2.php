@@ -46,6 +46,7 @@
                 
                 <!-- Botão -->
                 <input id= "input-cadastrar" type="button" value="Cadastrar" onclick="register_second_part()">
+                <p>Já possui uma conta?<br> <a href="../loginPage/login.php">Logar-se</a></p>
                 
             </form>
         </div>

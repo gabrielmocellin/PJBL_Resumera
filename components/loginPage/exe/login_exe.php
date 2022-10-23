@@ -28,7 +28,7 @@
             $_SESSION['profissao'] = $row['profissao'];
             $_SESSION['logado'] = true;
 
-            header('location: ../../profilePage/profile.php');
+            header('location: ../../homePage/homepage.php');
         }
 
         else{
