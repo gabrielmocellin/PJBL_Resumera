@@ -1,0 +1,36 @@
+
+
+
+*{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+body{
+    display:flex; justify-content: center; align-items: center;
+    height: 100vh; width: 100vw;
+    background-image: linear-gradient(to right,#5981ca, rgb(131, 149, 209));
+}
+
+#change_form{
+    display:flex; flex-direction: row;
+    height:80%; width:60%;
+    background-color:aliceblue;
+}
+
+#esquerda_div{
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+    height:100%; width:40%;
+    background-color: blueviolet;
+}
+
+#profile_img{
+    height:30%; width: 60%;
+    border-radius: 100%;
+}
+
+#direita_div{
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+    height:100%; width:60%;
+    background-color: brown;
+}

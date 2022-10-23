@@ -20,6 +20,8 @@
          VALUES ('$save_name', '$save_email', '$save_password', '$save_number', '$save_profession')";
 
         $result = $conn->query($sql);
+
+        header('location: ../../loginPage/login.php');
         
 
     }

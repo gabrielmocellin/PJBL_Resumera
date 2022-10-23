@@ -1,9 +1,9 @@
 <?php
     session_start();
-    function get_data(){
-        if(isset($_SESSION['is_logged'])){
-            $logged_email = $_SESSION['logged_email'];
-            return "$logged_email";
+    function get_data($dataSessionVariable){
+        if( $_SESSION['logado'] == true ){
+            $logged_data = $_SESSION[$dataSessionVariable];
+            return "$logged_data";
         }
         else{
             return 'ERRO';
@@ -36,11 +36,10 @@
         <section class="section-principal">
             
             <div class="profile-content">
-                <img src="midia/gbxchad.jpg" alt="GBEX" id="img-profile">
-                <?php echo"<h2 class='text-principal'>" . get_data() . "</h2>" ?>
-                <h3 class="text-principal">@diogobonet</h3>
-                <button class="editprofile">Editar Perfil</button>
-                <a href=""><img src="" alt=""></a>
+            <?php echo"<img src='" . get_data('imagem') . "' alt='Imagem do usuário' id='img-profile'>" ?>
+                <?php echo"<h2 class='text-principal'>" . get_data('nome') . "</h2>" ?>
+                <?php echo"<h3 class='text-principal'>" . get_data('email') . "</h3>" ?>
+                <button onclick= 'trocarDePagina()' class="editprofile">Editar Perfil</button>
             </div>
 
             <div class="content-principal">
@@ -57,3 +56,10 @@
                 </div>
             </div>
         </section>
+    </main>
+    <script language='JavaScript'>
+        function trocarDePagina(){
+            document.location.href = '../editProfilePage/editprofile.php';
+        }
+    </script>
+</body>
