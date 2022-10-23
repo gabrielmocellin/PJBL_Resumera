@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylePadrao.css">
+    <link rel="stylesheet" href="../consulta_BD_Page/stylePadrao.css">
     <title>Usuários</title>
 </head>
 <body>
@@ -23,9 +23,13 @@
     <main>
         <section class="section-principal">
             <div class="content-principal">
-                <h1>Voce deseja mesmo excluir sua conta?</h1>
-                <a href="delete.php">Confirmar</a>
-                <a href="../editProfilePage/editprofile.php">Cancelar</a>
+                <a href="confirmacao.html">Deletar minha conta</a>
+                <?php
+                    $erro = isset($_GET["erro"]);
+                    if($erro == 1){
+                        echo "<p style='color:red';>Erro ao desativar sua conta.</p>";
+                    }
+                ?>
             </div>
         </section>
     </main>

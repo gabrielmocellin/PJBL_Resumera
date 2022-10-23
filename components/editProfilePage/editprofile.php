@@ -22,9 +22,13 @@
 <body>
     <form method= 'POST' id= 'change_form' action= 'exe/editprofile_exe.php' enctype='multipart/form-data'>
         <div id= 'esquerda_div'>
-            <!-- COMANDO IMPORTANTÍSSIMO PARA TRAZER IMAGENS EM BLOB PARA O SITE DO BANCO DE DADOS! -->
-            <?php echo "<img id='profile_img' src='data:image;base64,".base64_encode($_SESSION['imagem'])."' alt= 'Foto do usuário'>"; ?>
-            <input name= 'change_image_input' type= 'file'>
+            <div id= 'esquerda_div_topo'>
+                <!-- COMANDO IMPORTANTÍSSIMO PARA TRAZER IMAGENS EM BLOB PARA O SITE DO BANCO DE DADOS! -->
+                <?php echo "<img id='profile_img' src='data:image;base64,".base64_encode($_SESSION['imagem'])."' alt= 'Foto do usuário'>"; ?>
+            </div>
+            <div id= 'esquerda_div_base'>
+                <input name= 'change_image_input' type= 'file'>
+            </div>
         </div>
         <div id='direita_div'>
 
@@ -35,7 +39,12 @@
                 <?php echo"<h1 class= 'exibindo'>" . get_data('nome') . "</h1>" ?>
                 <label class= 'label'>Trocar Nome:</label>
                 <input class= 'input' name= 'change_name_input' type= 'text'>
-                <input name= 'update' value= 'update' type= 'submit'>
+
+                <?php echo"<h1 class= 'exibindo'>" . get_data('bio') . "</h1>" ?>
+                <label class= 'label'>Trocar bio:</label>
+                <input class= 'input' name= 'change_bio_input' type= 'text'>
+
+                <input id= 'update' name= 'update' value= 'Update' type= 'submit'>
             </div>
 
         </div>

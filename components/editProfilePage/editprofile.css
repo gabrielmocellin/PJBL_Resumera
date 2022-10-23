@@ -30,9 +30,20 @@ body{
     background-color: #0c51cf;
 }
 
+#esquerda_div_topo{
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+    height: 50%;
+}
+
+#esquerda_div_base{
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+    height: 50%;
+}
+
 #profile_img{
-    height:30%; width: 60%;
+    height:60%; width: 95%;
     border-radius: 100%;
+    border: solid aliceblue 5px;
 }
 
 #direita_div{
