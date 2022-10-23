@@ -1,0 +1,56 @@
+/*---------------------------------------- CONFIG DA PÁGINA---------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap'); /* Roboto e Poppins */
+/* 
+font-family: 'Poppins', sans-serif; // Logo
+font-family: 'Roboto', sans-serif; // Sistema
+*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*---------------------------------------- HEADER ---------------------------------------- */
+.container {
+    background-color: #0c51cf;
+    display: flex;
+    gap: 42px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-cabecalho{
+    display: flex;
+    gap: 50px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    color: #efefef;
+    width: 110px;
+}
+
+
+nav {
+    color: white;
+    text-align: center;
+}
+
+.container-link {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.profile-image{
+    max-width: 3%;
+    max-height: 3%;
+    border-radius: 2px;
+}
