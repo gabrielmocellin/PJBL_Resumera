@@ -40,5 +40,5 @@
 </body>
 
 
-<script language= "JavaScript" src="cadastroJavaScript.js"></script>
+<script language= "JavaScript" src="../.js/cadastroJavaScript.js"></script>
 </html>
