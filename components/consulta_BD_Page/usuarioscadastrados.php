@@ -8,18 +8,7 @@
     <title>Usuários</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Resumera</h1>
-            <!-- <input type="text" name="" id="" class="container-input"> -->
-            <nav class="container-cabecalho">
-                <a class="container-link" href="#">Home</a>
-                <a class="container-link" href="#">Matérias</a>
-                <a class="container-link" href="#">Ranking Mensal</a>
-                <a class="container-link" href="#">Postar</a>
-            </nav>
-        </div>
-    </header>
+    <?php require "../navHeader/header.php"; ?>
     <main>
         <section class="section-principal">
             <div class="content-principal">

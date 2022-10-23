@@ -15,7 +15,7 @@ font-family: 'Roboto', sans-serif;
 body{
     display:flex; justify-content: center; align-items: center;
     height: 100vh; width: 100vw;
-    background-image: linear-gradient(to right,#5981ca, rgb(131, 149, 209));
+    background-image: linear-gradient(rgb(4, 159, 255), rgb(0, 204, 255));
 }
 
 #change_form{
@@ -42,8 +42,9 @@ body{
 
 #profile_img{
     height:60%; width: 95%;
-    border-radius: 100%;
-    border: solid aliceblue 5px;
+    border-radius: 50%;
+    border: solid black 2px;
+    box-shadow: black 0px 0px 15px;
 }
 
 #direita_div{
