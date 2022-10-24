@@ -5,8 +5,9 @@
 <header class="container">
     <h1 class="logo">Resumera</h1>
     <form name="form_search" id="form_search" action="../pesquisarPage/pesquisa.php" method="GET">
-        <input type="search" name="pesquisar" id="pesquisar" placeholder="Pesquisar..." autocomplete="off">
-        <a onclick="sendForm()">Pesquisar</a>
+        <input class="searchbar" type="search" name="pesquisar" id="pesquisar" placeholder="Pesquisar..." autocomplete="off">
+        <!--<a class="btnSearch" onclick="sendForm()"><img src='midia/lupa.png'></a>-->
+        <a class="btnSearch" onclick="sendForm()">Buscar</a>
     </form>
     <nav id= "navHeader" class="container-cabecalho">
         <a class="container-link" href="../home/index.php">Home</a>

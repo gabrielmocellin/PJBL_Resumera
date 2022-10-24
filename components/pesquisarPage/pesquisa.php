@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="midia/R.png" type="image/x-icon">
+    <link rel="stylesheet" href="../navHeader/styleHeader.css">
     <link rel="stylesheet" href="../home/style.css">
     <title>Pagina Inicial | Resumera</title>
 </head>
@@ -30,7 +31,7 @@
 
                 if($result->num_rows > 0){
                     echo "<tr>
-                            <td><b>Num</b></td>
+                            <td><b>N°</b></td>
                             <td><b>Nome</b></td>
                         </tr>";
                     $i = 1;
