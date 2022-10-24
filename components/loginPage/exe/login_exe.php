@@ -1,7 +1,7 @@
 <?php
     require "../../bd/connection.php";
 
-    if( isset($_POST['input_email']) && isset($_POST['input_senha'] )){
+    if( isset($_POST['input_email']) && isset($_POST['input_senha']) && $_POST['input_email'] != '' && $_POST['input_senha'] != '' ){
         
         $email = $_POST['input_email'];
         $senha = $_POST['input_senha'];
@@ -31,12 +31,11 @@
 
             header('location: ../../home/main.php');
         }
-
         else{
-            header('location: ../login.php');
+            header('location: ../login.php?erro=1');
         }
     }
     else{
-        header('location: ../login.php');
+        header('location: ../login.php?erro=2');
     }
 ?>

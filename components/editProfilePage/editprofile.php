@@ -1,5 +1,4 @@
 <?php
-    session_start();
     function get_data($dataSessionVariable){
         if( $_SESSION['logado'] == true ){
             $logged_data = $_SESSION[$dataSessionVariable];
@@ -17,9 +16,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="editprofile.css">
+    <link rel="stylesheet" href="../navHeader/styleHeader.css">
     <title>Edição de Perfil</title>
+    <?php require '../navHeader/header.php';?>
 </head>
 <body>
+
+<div id= 'body_form_div'>
     <form method= 'POST' id= 'change_form' action= 'exe/editprofile_exe.php' enctype='multipart/form-data'>
         <div id= 'esquerda_div'>
             <div id= 'esquerda_div_topo'>
@@ -28,10 +31,10 @@
             </div>
             <div id= 'esquerda_div_base'>
                 <input name= 'change_image_input' type= 'file'>
+                <a onclick='trocarDePagina("../profilePage/profile.php")'>Voltar</a>
             </div>
         </div>
         <div id='direita_div'>
-
             <div id= 'direita_div_topo'>
                 <h1>Edição de Perfil</h1>
             </div>
@@ -39,7 +42,6 @@
                 <?php echo"<h1 class= 'exibindo'>" . get_data('nome') . "</h1>" ?>
                 <label class= 'label'>Trocar Nome:</label>
                 <input class= 'input' name= 'change_name_input' type= 'text'>
-
                 <?php echo"<h1 class= 'exibindo'>" . get_data('bio') . "</h1>" ?>
                 <label class= 'label'>Trocar bio:</label>
                 <input class= 'input' name= 'change_bio_input' type= 'text'>
@@ -54,9 +56,10 @@
                 <br>
                 <input id= 'update' name= 'update' value= 'Update' type= 'submit'>
             </div>
-
         </div>
     </form>
+</div>
+
 <script src='../.js/script.js'></script>
 </body>
 </html>

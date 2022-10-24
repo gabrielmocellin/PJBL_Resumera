@@ -1,5 +1,4 @@
 <?php
-    session_start();
     function get_data($dataSessionVariable){
         if( $_SESSION['logado'] == true ){
             $logged_data = $_SESSION[$dataSessionVariable];
@@ -16,6 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../navHeader/styleHeader.css">
     <title>Perfil | Resumera</title>
 </head>
 <body>

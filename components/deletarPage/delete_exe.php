@@ -8,8 +8,10 @@
     
     if($conn->query($sql) === true){
         header ("Location: ../landingPage/index.html");
+        
     }
     else{
         header ("Location: ../editProfilePage/editprofile.php?erro=1");
+        
     }
 ?>
