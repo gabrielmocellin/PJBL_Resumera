@@ -12,7 +12,7 @@ font-family: 'Roboto', sans-serif; // Sistema
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #fbfbfb;
+    background-color: #e6edf0;
     -webkit-font-smoothing: antialiased !important;
 }
 
@@ -89,13 +89,6 @@ div.novoPost div.infoUser {
     justify-content: center;
 }
 
-div.novoPost div.infoUser div.imgUser {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: blue;
-}
-
 div.novoPost div.infoUser strong {
     font-size: 17px;
     margin: 10px;
@@ -147,4 +140,53 @@ div.icones {
 
 .btnSubmitForm:hover {
     background-color: #6975ad;
+}
+
+#imgUser_div{
+    height:30px; width:30px;
+}
+
+.imgUser{
+    height:100%; width: 100%;
+    border-radius: 50px;
+}
+
+ul.posts li.post {
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    padding: 25px;
+    box-shadow: 1px 0 3px gray;
+    text-align: justify;
+}
+
+ul.posts li.post div.infoUser div.nameAndHour {
+    margin-left: 10px;
+}
+
+ul.posts li.post div.infoUser {
+    display: flex;
+    align-items: center;
+}
+
+ul.posts li.post div.infoUser div.imgUserPost {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+ul.posts li.post div.infoUser div.nameAndHour > strong {
+    color: blue;
+}
+
+ul.posts li.post div.infoUser div.nameAndHour > p {
+    color: gray;
+    font-size: 12px;
+}
+
+ul.posts li.post > p {
+    width: 100%;
+    margin: 20px 0;
 }

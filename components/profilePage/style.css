@@ -12,7 +12,7 @@ font-family: 'Roboto', sans-serif; // Sistema
 body {
     height:100vh; width:100vw;
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(rgb(4, 159, 255), rgb(0, 204, 255));
+    background-color: #e6edf0;
 }
 
 /*---------------------------------------- HEADER ---------------------------------------- */
@@ -69,7 +69,7 @@ nav {
     width: 20%;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: #f7f0f0;
+    background-color: white;
     margin-left: 15px;
     margin-right: 15px;
     /*ALTERAÇÕES PARA COMENTAR COM O DIOGO= box-shadow: 2px 2px 2px 2px#6d99ec; */
@@ -98,7 +98,7 @@ nav {
     width: 60%;
     border: 1px solid black;
     padding: 5%;
-    background-color: #f7f0f0;
+    background-color: white;
     border-radius: 10px;
     margin-right: 10px;
     /* ALTERAÇÕES PARA COMENTAR COM DIOGO = box-shadow: 2px 2px 2px 2px#6d99ec; */

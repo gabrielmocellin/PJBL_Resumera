@@ -45,8 +45,38 @@ font-family: 'Roboto', sans-serif; // Sistema
 
 #div_profile_img{
     width:5%; height: 100%;
+    border-radius: 50%;
 }
 
 #header_profile_img{
     height:100%; width:100%;
+    border-radius: 50%;
+}
+
+.btnSearch{
+    font-size: 16px;
+    height: 30.5px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #efefef;
+}
+
+#form_search{
+    display: flex;
+    flex-direction: row;
+}
+
+.btnSearch:hover{
+    background-color: rgb(216, 212, 212);
+    cursor: pointer;
+}
+
+.searchbar{
+    width: 60%;
+    height: 30.5px;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }

@@ -14,8 +14,21 @@ function confirm_delete(){
 }
 
 function logar(){
-
     var login = document.getElementById('email').value;
     var senha = document.getElementById('senha').value;
+}
 
+function sendForm(){
+    let pesquisa = document.getElementById("pesquisar");
+
+    if (pesquisa.value == '') {
+        alert('Por favor, digite algo na barra de pesquisa.');
+        pesquisa.focus();
+        return;
+    }
+    else {
+        let form = document.getElementById("form_search");
+        form.submit();
+        return;
+    }
 }

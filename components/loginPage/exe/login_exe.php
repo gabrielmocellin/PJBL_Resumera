@@ -29,7 +29,7 @@
             $_SESSION['bio'] = $row['bio'];
             $_SESSION['logado'] = true;
 
-            header('location: ../../home/main.php');
+            header('location: ../../home/index.php');
         }
         else{
             header('location: ../login.php?erro=1');

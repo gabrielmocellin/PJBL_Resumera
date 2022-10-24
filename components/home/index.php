@@ -1,42 +1,27 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="midia/R.png" type="image/x-icon">
+    <link rel="stylesheet" href="../navHeader/styleHeader.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="midia/R.png" type="image/x-icon">
     <title>Pagina Inicial | Resumera</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Resumera</h1>
-            <form name="form_search" id="form_search" action="../pesquisarPage/pesquisa.php" method="GET">
-                <input type="search" name="pesquisar" id="pesquisar" placeholder="Pesquisar...">
-                <button type="submit"><img src="assets/search.svg" alt="Clique aqui para Pesquisar"></button>
-            </form>
-            <nav class="container-cabecalho">
-                <a class="container-link" href="#">Home</a>
-                <a class="container-link" href="#">Matérias</a>
-                <a class="container-link" href="#">Ranking Mensal</a>
-                <a class="container-link" href="#">Postar</a>
-                
-            </nav>
-            <!-- COMANDO IMPORTANTÍSSIMO PARA TRAZER IMAGENS EM BLOB PARA O SITE DO BANCO DE DADOS! -->
-            <!-- <?php echo "<img onclick='trocarDePagina(" . '"../profilePage/profile.php"' . ")' id='profile_img' src='data:image;base64,".base64_encode($_SESSION['imagem'])."' alt= 'Foto do usuário'>"; ?> -->
-
-            <script src="../.js/script.js"></script>
-        </div>
-    </header>
+    <?php require "../navHeader/header.php"?>
 
     <main class="main">
         <!-- FORMULÁRIO PARA POSTAR -->
         <div class="novoPost">
             <div class="infoUser">
-                <div class="imgUser"></div>
-                <strong>Diogo Bonet</strong>
+                <div id='imgUser_div'>
+                    <?php $nome = $_SESSION['nome']; $imagem = $_SESSION['imagem']; ?>
+                    <!-- COMANDO IMPORTANTÍSSIMO PARA TRAZER IMAGENS EM BLOB PARA O SITE DO BANCO DE DADOS! -->
+                    <?php echo "<img class='imgUser'  src='data:image;base64,".base64_encode($imagem)."' alt= 'Foto do usuário'>"; ?>
+                </div>
+                <div id='nomeUser_div'>
+                    <?php echo "<strong>$nome</strong>"; ?>
+                </div>
             </div>
             <form action="" class="formPost">
 
@@ -54,11 +39,28 @@
             </form>
             
         </div>
-        <ul class="post">
 
+        <ul class="posts">
+            <li class="post">
+                <div class="infoUser">
+                    <div class="imgUserPost"></div>
+                        <div class="nameAndHour">
+                            <strong>Diogo Bonneto</strong>
+                            <p>21hrs</p>
+                        </div>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo est voluptates aliquid, ipsa odit iusto quidem nisi fuga, maxime laudantium esse cupiditate quod praesentium amet reiciendis consequuntur, asperiores itaque omnis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit excepturi maxime itaque voluptatum dolor corporis quisquam natus ab obcaecati asperiores ducimus voluptas incidunt dolorum nam modi, ad laboriosam, pariatur dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quae ipsam consequatur mollitia voluptate beatae quo quam reiciendis eius harum fuga numquam corrupti dignissimos ducimus porro sequi, cum hic unde!
+                </p>
+
+                <div class="actionBtnPost">
+                    <button type="button" class="filesPost like"><img src="assets/like1.svg" alt="Curtir">Curtir</button>
+                    <button type="button" class="filesPost comment"><img src="assets/chat.svg" alt="Curtir">Comentar</button>
+                    <button type="button" class="filesPost share"><img src="assets/share.svg" alt="Compartilhar">Compartilhar</button>
+                </div>
+            </li>
         </ul>
     </main>
-
 
 </body>
 </html>
