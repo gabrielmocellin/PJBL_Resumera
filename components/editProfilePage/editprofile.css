@@ -13,9 +13,13 @@ font-family: 'Roboto', sans-serif;
 }
 
 body{
-    display:flex; justify-content: center; align-items: center;
     height: 100vh; width: 100vw;
     background-image: linear-gradient(rgb(4, 159, 255), rgb(0, 204, 255));
+}
+
+#body_form_div{
+    display:flex; justify-content: center; align-items: center;
+    height:90%; width: 100%;
 }
 
 #change_form{

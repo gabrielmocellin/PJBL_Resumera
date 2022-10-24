@@ -7,10 +7,13 @@ font-family: 'Roboto', sans-serif; // Sistema
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #fbfbfb;
+    -webkit-font-smoothing: antialiased !important;
 }
 
 /*---------------------------------------- HEADER ---------------------------------------- */
@@ -53,4 +56,95 @@ nav {
     max-width: 3%;
     max-height: 3%;
     border-radius: 2px;
+}
+
+/* ---------------------------------------- MAIN ---------------------------------------- */
+.main {
+    max-width: 900px;
+    margin: 0px auto;
+}
+
+li {
+    list-style: none;
+}
+
+div.novoPost {
+    width: 100%;
+    height: 240px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    margin: 50px 0;
+    padding: 25px;
+
+    border-radius: 15px;
+    box-shadow: 1px 0 3px gray;
+}
+
+div.novoPost div.infoUser {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.novoPost div.infoUser div.imgUser {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: blue;
+}
+
+div.novoPost div.infoUser strong {
+    font-size: 17px;
+    margin: 10px;
+    color: blue;
+}
+
+form.formPost {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form.formPost textarea {
+    margin: 15px 0;
+    padding: 25px;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    border: 1px solid black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+div.Button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.icones {
+    width: 100px;
+    outline: none;
+    border: 0;
+    background: white;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.btnSubmitForm {
+    padding: 10px 50px;
+    font-family: 'Poppins', sans-serif;
+    border: 0;
+    background-color: #0c51cf;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 50px;
+}
+
+.btnSubmitForm:hover {
+    background-color: #6975ad;
 }
