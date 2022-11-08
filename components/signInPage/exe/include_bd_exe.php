@@ -22,10 +22,19 @@
         $save_password = $_SESSION['senha'];
         $save_number = $_POST['input-telefone'];
         $save_profession = $_POST['input-profissao'];
+        
+        /*Confesso que eu não sei muito bem como funciona esse comando, mas quando da um input de imagem é criado
+        pelo php o $_FILES com o nome do input usado*/
+        if(file_exists($_FILES['change_image_input']['tmp_name'])){
+            $file = addslashes(file_get_contents($_FILES['input-defaultimg']['tmp_name']));
+        }
+        else{
+            $file = NULL;
+        }
 
         //Salvando no banco de dados todos os dados informados pelo usuário
-        $sql = "INSERT INTO cadastros (nome, email, senha, telefone, profissao)
-         VALUES ('$save_name', '$save_email', '$save_password', '$save_number', '$save_profession')";
+        $sql = "INSERT INTO cadastros (nome, email, senha, telefone, profissao, imagem)
+         VALUES ('$save_name', '$save_email', '$save_password', '$save_number', '$save_profession', '$file')";
 
         $result = $conn->query($sql);
 

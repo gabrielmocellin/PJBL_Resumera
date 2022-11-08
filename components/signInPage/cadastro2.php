@@ -31,7 +31,7 @@
         </div>
 
         <div id="direita_div">
-            <form id= "form-register2" name= "form-register2" method= "POST" action= 'exe/include_bd_exe.php'>
+            <form id= "form-register2" name= "form-register2" method= "POST" action= 'exe/include_bd_exe.php' enctype='multipart/form-data'>
 
                 <!-- E-Mail -->
                 <label class= "form_label">Telefone:</label>
@@ -43,6 +43,9 @@
                     <option value="aluno" selected>Aluno</option>
                     <option value="professor">Professor</option>
                 </select>
+
+                <!-- Imagem Padrão -->
+                <input name='input-defaultimg' type='file' class= "form_input">
                 
                 <!-- Botão -->
                 <input id= "input-cadastrar" type="button" value="Cadastrar" onclick="register_second_part()">
