@@ -76,21 +76,30 @@ body{
 
 .exibindo{
     font-family: 'Roboto', sans-serif; 
+    font-size: 23.5px;
+    color: white;
+}
+
+.bio {
+    font-family: 'Roboto', sans-serif; font-size: 14.5px; color: rgb(212, 212, 212); text-align: center;
+    margin-top: 10px;
 }
 
 .label{
-    font-size: 24px; font-family: 'Poppins', sans-serif; font-weight: bold;
+    font-size: 20px; font-family: 'Poppins', sans-serif; font-weight: bold;
 }
 
 .input{
-    height: 28px; width:80%;
-    font-size:28px;
+    height: 26px; width: 75%;
+    font-size:16px;
+    margin-bottom: 22px;
+    padding-left: 2px;
 }
 
 #update {
     margin-top: 5%;
     font-family: 'Roboto', sans-serif;
-    width: 60%;
+    width: 40%;
     height: 8%;
     border-radius: 7px;
     background-color: #0c51cf;
@@ -101,10 +110,10 @@ body{
 #desativarButton {
     margin-top: 5%;
     font-family: 'Roboto', sans-serif;
-    width: 60%;
+    width: 40%;
     height: 8%;
     border-radius: 7px;
-    background-color: #0c51cf;
+    background-color: #e73e3e;
     color: white;
 
 }
@@ -115,4 +124,34 @@ body{
 
 #update:hover {
     background-color: #6975ad;
+}
+
+#botaoVoltar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    font-family: 'Roboto', sans-serif;
+    width: 30%;
+    height: 12%;
+    border-radius: 7px;
+    background-color: #0216E6;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+#botaoVoltar:hover {
+    cursor: pointer;
+    background-color: #6975ad;
+}
+
+.h1 {
+    font-family: Roboto; font-size: 24px; margin-top: 15px; color: #0c51cf;
+}
+
+#botaoUpar {
+    display: flex;
+    flex-direction: column;
+    color: white;
 }

@@ -17,7 +17,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="editprofile.css">
     <link rel="stylesheet" href="../navHeader/styleHeader.css">
-    <title>Edição de Perfil</title>
+    <link rel="shortcut icon" href="../home/midia/R.png" type="image/x-icon">
+    <title>Edição de Perfil | Resumera</title>
 </head>
 <body>
     <?php require '../navHeader/header.php';?>
@@ -29,24 +30,26 @@
                     <!-- COMANDO IMPORTANTÍSSIMO PARA TRAZER IMAGENS EM BLOB PARA O SITE DO BANCO DE DADOS! -->
                     <?php echo "<img id='profile_img' src='data:image;base64,".base64_encode($_SESSION['imagem'])."' alt= 'Foto do usuário'>"; ?>
                 </div>
+                <?php echo"<h1 class= 'exibindo'>" . get_data('nome') . "</h1>" ?>
+                <?php echo"<h1 class= 'bio'>" . get_data('bio') . "</h1>" ?>
                 <div id= 'esquerda_div_base'>
-                    <input name= 'change_image_input' type= 'file'>
-                    <a onclick='trocarDePagina("../profilePage/profile.php")'>Voltar</a>
+                    <input id="botaoUpar" name='change_image_input' type= 'file'>
+                    <a id="botaoVoltar" onclick='trocarDePagina("../profilePage/profile.php")'>Voltar</a>
                 </div>
             </div>
             <div id='direita_div'>
                 <div id= 'direita_div_topo'>
-                    <h1>Edição de Perfil</h1>
+                    <h1 class="h1">Edição de Perfil</h1>
                 </div>
                 <div id= 'direita_div_base'>
-                    <?php echo"<h1 class= 'exibindo'>" . get_data('nome') . "</h1>" ?>
-                    <label class= 'label'>Trocar Nome:</label>
-                    <input class= 'input' name= 'change_name_input' type= 'text'>
-                    <?php echo"<h1 class= 'exibindo'>" . get_data('bio') . "</h1>" ?>
-                    <label class= 'label'>Trocar bio:</label>
-                    <input class= 'input' name= 'change_bio_input' type= 'text'>
+                    
+                    <label class= 'label'>Trocar nome:</label>
+                    <input class= 'input' name= 'change_name_input' type= 'text' maxlength="200" placeholder="Digite seu nome...">
+                    
+                    <label class= 'label'>Trocar biografia:</label>
+                    <input class= 'input' name= 'change_bio_input' type= 'text' maxlength="200" placeholder="Digite sua biografia...">
+                    
                     <br>
-                    <input id='desativarButton' type='button' value='Desativar a minha conta'  onclick='confirm_delete()'>
                     <?php
                         $erro = isset($_GET["erro"]);
                         if($erro == 1){
@@ -54,6 +57,7 @@
                         }
                     ?>
                     <input id= 'update' name= 'update' value= 'Update' type= 'submit'>
+                    <input id='desativarButton' type='button' value='Desativar a minha conta'  onclick='confirm_delete()'>
                 </div>
             </div>
         </form>
