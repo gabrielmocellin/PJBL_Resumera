@@ -8,6 +8,14 @@
     && isset($_SESSION['senha']) && isset($_POST['input-telefone']) 
     && isset($_POST['input-profissao'])){
 
+        $sqlContas = "SELECT email FROM cadastros";
+
+        $contas = $conn->query($sqlContas);
+
+        $contas = $contas->fetch_assoc();
+
+        print_r($contas);
+
         //Trazendo os valores da session (cadastro.php) e $_POST's do (cadastro2.php)
         $save_name = $_SESSION['nome'];
         $save_email = $_SESSION['email'];
@@ -22,8 +30,6 @@
         $result = $conn->query($sql);
 
         header('location: ../../loginPage/login.php');
-        
-
     }
     else{
         //Caso esteja em falta alguma das variáveis necessárias

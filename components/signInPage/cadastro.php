@@ -30,6 +30,14 @@
                 <!-- Confirmar Senha -->
                 <label class= "form_label">Confirme sua senha:</label>
                 <input id= "input-confirmar" class="form_input" type="password" placeholder="Digite de novo a sua senha..."/>
+
+                <?php
+                        if (isset($_GET['erro'])){
+                            if($_GET['erro'] == 1){
+                                echo "<p style='color:red';>Conta já criada.</p>";
+                            }
+                        }
+                    ?>
                 
                 <!-- Botão -->
                 <input id= "input-prosseguir" type="button" value="Prosseguir" onclick="register_first_part()">

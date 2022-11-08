@@ -88,8 +88,13 @@ nav {
     border-radius: 7px;
     background-color: #0c51cf;
     color: white;
+    cursor: pointer;
 }
 
+.editprofiler:hover {
+    cursor: pointer;
+    background-color: #6975ad;
+}
 /* CONTEUDO PRINCIPAL DA PÁGINA (RESUMOS) */
 
 .content-principal {
