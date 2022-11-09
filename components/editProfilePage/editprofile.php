@@ -27,8 +27,10 @@
         <form method= 'POST' id= 'change_form' action= 'exe/editprofile_exe.php' enctype='multipart/form-data'>
             <div id= 'esquerda_div'>
                 <div id= 'esquerda_div_topo'>
-                    <!-- COMANDO IMPORTANTÍSSIMO PARA TRAZER IMAGENS EM BLOB PARA O SITE DO BANCO DE DADOS! -->
-                    <?php echo "<img id='profile_img' src='data:image;base64,".base64_encode($_SESSION['imagem'])."' alt= 'Foto do usuário'>"; ?>
+                    <div id = 'esquerda_div_topo_img'>
+                        <!-- COMANDO IMPORTANTÍSSIMO PARA TRAZER IMAGENS EM BLOB PARA O SITE DO BANCO   DE DADOS! -->
+                        <?php echo "<img id='profile_img' src='data:image;base64,".base64_encode($_SESSION['imagem'])."' alt= 'Foto do usuário'>"; ?>
+                    </div>
                 </div>
                 <?php echo"<h1 class= 'exibindo'>" . get_data('nome') . "</h1>" ?>
                 <?php echo"<h1 class= 'bio'>" . get_data('bio') . "</h1>" ?>
@@ -56,8 +58,8 @@
                             echo "<p style='color:red';>Erro ao desativar sua conta.</p>";
                         }
                     ?>
-                    <input id= 'update' name= 'update' value= 'Update' type= 'submit'>
-                    <input id='desativarButton' type='button' value='Desativar a minha conta'  onclick='confirm_delete()'>
+                    <input id= 'update' name= 'update' value= 'Salvar' type= 'submit'>
+                    <input id='desativarButton' type='button' value='Desativar conta'  onclick='confirm_delete()'>
                 </div>
             </div>
         </form>

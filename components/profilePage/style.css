@@ -75,16 +75,32 @@ nav {
     /*ALTERAÇÕES PARA COMENTAR COM O DIOGO= box-shadow: 2px 2px 2px 2px#6d99ec; */
 }
 
+#profile-content-top{
+    display:flex; justify-content: center; align-items: center;
+    width:100%; height:50%;
+    /* background-color: aqua; */
+}
+
+#profile-content-top-img{
+    width:60%; height:100%;
+    /* background-color: aquamarine; */
+}
+
+#profile-content-bottom{
+    display:flex; justify-content: center; align-items: center; flex-direction: column;
+    width:100%; height:50%;
+}
+
 #img-profile {
     border-radius: 50%;
-    width: 70%;
+    width: 100%; height:100%;
 }
 
 .editprofile {
     margin-top: 5%;
     font-family: 'Roboto', sans-serif;
     width: 60%;
-    height: 8%;
+    height: 15%;
     border-radius: 7px;
     background-color: #0c51cf;
     color: white;
