@@ -23,9 +23,9 @@
                     <?php echo "<strong>$nome</strong>"; ?>
                 </div>
             </div>
-            <form action="" class="formPost">
+            <form method= "POST" action="exe/home_post_exe.php" class="formPost">
 
-                <textarea name="textarea" id="textarea" placeholder="Escreva seu resumo..."></textarea>
+                <textarea name="textarea" id="textarea" placeholder="Escreva seu resumo..." maxlength="500"></textarea>
 
                 <div class="Button">
 
@@ -39,27 +39,7 @@
             </form>
             
         </div>
-
-        <ul class="posts">
-            <li class="post">
-                <div class="infoUser">
-                    <div class="imgUserPost"></div>
-                        <div class="nameAndHour">
-                            <strong>Diogo Bonneto</strong>
-                            <p>21hrs</p>
-                        </div>
-                </div>
-
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo est voluptates aliquid, ipsa odit iusto quidem nisi fuga, maxime laudantium esse cupiditate quod praesentium amet reiciendis consequuntur, asperiores itaque omnis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit excepturi maxime itaque voluptatum dolor corporis quisquam natus ab obcaecati asperiores ducimus voluptas incidunt dolorum nam modi, ad laboriosam, pariatur dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quae ipsam consequatur mollitia voluptate beatae quo quam reiciendis eius harum fuga numquam corrupti dignissimos ducimus porro sequi, cum hic unde!
-                </p>
-
-                <div class="actionBtnPost">
-                    <button type="button" class="filesPost like"><img src="assets/like1.svg" alt="Curtir">Curtir</button>
-                    <button type="button" class="filesPost comment"><img src="assets/chat.svg" alt="Curtir">Comentar</button>
-                    <button type="button" class="filesPost share"><img src="assets/share.svg" alt="Compartilhar">Compartilhar</button>
-                </div>
-            </li>
-        </ul>
+        <?php require "exe/home_showpost_exe.php" ?>
     </main>
 
 </body>
