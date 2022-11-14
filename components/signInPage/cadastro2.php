@@ -21,7 +21,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="cadastroStyles.css">
-    <title>Resumera | Registrar-se</title>
+    <link rel="shortcut icon" href="midia/ResumeraLogoPNG.png" type="image/x-icon">
+    <title>Registrar-se | Resumera</title>
 </head>
 <body onload="setTimeout(trocar_logo, 5000)">
 

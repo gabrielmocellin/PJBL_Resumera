@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="cadastroStyles.css">
-    <title>Resumera | Registrar-se</title>
+    <link rel="shortcut icon" href="midia/ResumeraLogoPNG.png" type="image/x-icon">
+    <title>Registrar-se | Resumera</title>
 </head>
 <body onload="setTimeout(trocar_logo, 5000)">
 
@@ -17,7 +18,7 @@
                 
                 <!-- Nome -->
                 <label class= "form_label">Nome:</label>
-                <input name= "input-nome" id= "input-nome" class="form_input" type="text" placeholder="Digite seu nome">
+                <input name= "input-nome" id= "input-nome" class="form_input" type="name" placeholder="Digite seu nome">
 
                 <!-- E-Mail -->
                 <label class= "form_label">E-mail:</label>

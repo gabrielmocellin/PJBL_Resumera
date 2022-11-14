@@ -17,6 +17,7 @@ body{
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(rgb(4, 159, 255), rgb(0, 204, 255));
+    font-family: 'Roboto', sans-serif; 
 }
 
 #container{
@@ -71,8 +72,8 @@ body{
 }
 
 .form_label{
-    font-family: 'Poppins', sans-serif;
-    font-size:24px;
+    font-family: 'Roboto', sans-serif; 
+    font-size:18px;
     font-weight: bold;
 }
 
@@ -80,7 +81,7 @@ body{
     padding: 0 0 0 15px;
     margin: 0 0 25px 0;
     width: 80%;
-    height: 36px;
+    height: 42px;
     outline:none;
     border:none;
 }
@@ -91,9 +92,30 @@ body{
 
 /* ##### cadastro.php #####*/
 #input-prosseguir{
+    width:35%;
+    height:15%;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+    color:#efefef;
+    border-radius:14px;
+    font-size:16px;
+    border: 2px solid black;
+    background-color: #105ac9;
+    margin-bottom: 3.56px;
+    cursor: pointer;
+}
+
+#input-prosseguir:hover {
+   background-color: #105ac9a6;
+   color: white;
+}
+
+
+/* ##### cadastro2.php #####*/
+#input-cadastrar{
     width:40%;
     height:10%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif; 
     font-weight: bold;
     color:#efefef;
     border-radius:14px;
@@ -101,17 +123,16 @@ body{
     border: 2px solid black;
     background-color: #105ac9;
 }
-/* ##### cadastro2.php #####*/
-#input-cadastrar{
-    width:40%;
-    height:10%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color:#efefef;
-    border-radius:14px;
-    font-size:16px;
-    border: 2px solid black;
-    background-color: #105ac9;
+
+p, a {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
 }
 
 @media (max-width: 900px){
