@@ -44,9 +44,6 @@
                     <option value="aluno" selected>Aluno</option>
                     <option value="professor">Professor</option>
                 </select>
-
-                <!-- Imagem Padrão -->
-                <input name='input-defaultimg' type='file' class= "form_input">
                 
                 <!-- Botão -->
                 <input id= "input-cadastrar" type="button" value="Cadastrar" onclick="register_second_part()">

@@ -15,8 +15,8 @@ var form2 = document.getElementById("form-register2");
 
 function register_first_part() {
 
-    const reName = /^[a-zA-Z ]{1,150}$/;
-    const reEmail = /^[a-z0-9]{1,}@[a-z0-9]+\..{1,}$/;
+    const reName = /^[\w\W]{1,150}$/;
+    const reEmail = /^[\w0-9\..]{1,}@[\w0-9]+\..{1,}$/;
     const rePassword = /^.{6,}$/;
 
     function isName(name){
