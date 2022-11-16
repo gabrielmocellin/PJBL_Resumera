@@ -13,6 +13,7 @@ font-family: 'Roboto', sans-serif; // Sistema
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #e6edf0;
+    height:100vh; width:100vw;
     -webkit-font-smoothing: antialiased !important;
 }
 
@@ -189,4 +190,8 @@ ul.posts li.post div.infoUser div.nameAndHour > p {
 ul.posts li.post > p {
     width: 100%;
     margin: 20px 0;
+}
+
+.post_text{
+    font-family: 'Poppins', sans-serif;
 }
