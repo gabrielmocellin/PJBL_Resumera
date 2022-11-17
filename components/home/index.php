@@ -25,7 +25,7 @@
             </div>
             <form method= "POST" action="exe/home_post_exe.php" class="formPost">
 
-                <textarea name="textarea" id="textarea" placeholder="Escreva seu resumo..." maxlength="500"></textarea>
+                <textarea name="textarea" id="textarea" placeholder="Escreva seu resumo..." maxlength="550"></textarea>
 
                 <div class="Button">
 
