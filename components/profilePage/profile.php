@@ -16,11 +16,17 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../navHeader/styleHeader.css">
-    <title>Perfil | Resumera</title>
+    <link rel="shortcut icon" href="../home/midia/R.png" type="image/x-icon">
+    
 </head>
 <body>
     <?php require "../navHeader/header.php"; ?>
 
+    <?php
+        $name = get_data('nome');
+        $page_title = "$name";
+        echo("<title>$page_title | Resumera</title>");
+    ?>
     <main>
         <section class="section-principal">
             
@@ -33,7 +39,7 @@
                 </div>
                 <div id='profile-content-bottom'>
                     <?php echo"<h2 class='text-principal'>" . get_data('nome') . "</h2>" ?>
-                    <?php echo"<h3 class='text-principal'>" . get_data('email') . "</h3>" ?>
+                    <?php echo"<h3 class= 'bio'>" . get_data('bio') . "</h3>" ?>
                     <button onclick= 'trocarDePagina()' class="editprofile">Editar Perfil</button>
                 </div>
             </div>

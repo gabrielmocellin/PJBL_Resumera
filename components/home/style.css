@@ -192,6 +192,56 @@ ul.posts li.post > p {
     margin: 20px 0;
 }
 
+ul.posts li.post div.actionBtnPost {
+    display: flex;
+    align-items: center;
+}
+
+ul.posts li.post div.actionBtnPost button.filesPost img {
+    margin-right: 5px
+}
+
+ul.posts li.post div.actionBtnPost button.filesPost {
+    padding: 5px 20px;
+    border-radius:10px;
+    border: 0px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2;
+}
+
+.like {
+    background-color: rgb(211, 208, 208);
+}
+.like:hover {
+    background-color: #fc3542;
+}
+
+.comment {
+    background-color: rgb(211, 208, 208);
+}
+
+.comment:hover {
+    color: white;
+    background-color: #2572E8;
+    
+}
+
+.share {
+    background-color: rgb(211, 208, 208);
+}
+.share:hover {
+    background-color: rgb(110, 184, 110);
+}
+
 .post_text{
     font-family: 'Poppins', sans-serif;
 }
+
