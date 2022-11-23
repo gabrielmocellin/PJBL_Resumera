@@ -18,7 +18,7 @@
     </nav>
     <div id= 'div_profile_img'>
         <!-- COMANDO IMPORTANTÍSSIMO PARA TRAZER IMAGENS EM BLOB PARA O SITE DO BANCO DE DADOS! -->
-        <?php echo "<img onclick='trocarDePagina(" . '"../profilePage/profile.php"' . ")' id='header_profile_img' src='data:image;base64,".base64_encode($_SESSION['imagem'])."' alt= 'Foto do usuário'>"; ?>
+        <?php echo "<img class='img' onclick='trocarDePagina(" . '"../profilePage/profile.php"' . ")' id='header_profile_img' src='data:image;base64,".base64_encode($_SESSION['imagem'])."' alt= 'Foto do usuário'>"; ?>
     </div>
 </header>
 <script src="../.js/script.js"></script>

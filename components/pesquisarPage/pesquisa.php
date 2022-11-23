@@ -7,37 +7,43 @@
     <link rel="shortcut icon" href="midia/R.png" type="image/x-icon">
     <link rel="stylesheet" href="../navHeader/styleHeader.css">
     <link rel="stylesheet" href="../home/style.css">
-    <title>Pagina Inicial | Resumera</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href=".../midia/!.png" type="image/x-icon">
 </head>
 <body>
     <?php require "../navHeader/header.php" ?>
 
     <main>
-        <table>
+        <div>
             <?php
                 require "../bd/connection.php";
 
-                function mostrarUsuarios($nome, $n){  //template para printar as linhas da table
-                    echo "<tr>";
-                        echo "<td>" . $n. "</td>";
-                        echo "<td>" . $nome. "</td>";
-                    echo "</tr>";
+                function mostrarUsuarios($nome, $bio, $imagem){  //template para printar as linhas da table
+                    echo"<section class='main'>";
+                    echo"<div class='result'>";
+                    echo"<div class='content'>";
+                    echo"<div class='flex-img'>";
+                    echo"<div class='div-img'><img class='img' src='data:image;base64,".base64_encode($imagem)."' alt= 'Foto do usuário'></div>";
+                    echo"<h1 class='name-label'>$nome</h1>";
+                    echo("</div>");
+                    echo("<h2 class='bio-label'>$bio</h2>");
+                    echo("</div>");
+                    echo("</div>");
+                    echo("</section>");
                 }
 
                 $search = $_GET['pesquisar'];
+                // Title da Pagína
+                echo("<title> $search | Resultados no Resumera</title>");
+                   
 
-                $sql = "SELECT nome FROM cadastros WHERE nome LIKE '$search%'"; //seleciona apenas os usuários que estão de acordo com o nome digitado na barra de p
+                $sql = "SELECT nome, bio, imagem FROM cadastros WHERE nome LIKE '$search%'"; //seleciona apenas os usuários que estão de acordo com o nome digitado na barra de p
                 $result = $conn->query($sql);
 
                 if($result->num_rows > 0){
-                    echo "<tr>
-                            <td><b>N°</b></td>
-                            <td><b>Nome</b></td>
-                        </tr>";
-                    $i = 1;
+                    echo "<h1 class='headingPage'>Resultados obtidos</h1>";
                     while($row = $result->fetch_assoc()){
-                        mostrarUsuarios($row['nome'], $i);
-                        $i += 1;
+                        mostrarUsuarios($row['nome'], $row['bio'], $row['imagem']);
                     }
                 }
                 else{
@@ -46,10 +52,9 @@
 
                 $conn->close();
             ?>
-        </table>
-    </main>
-    <footer>
+        </div>
 
-    </footer>
+        
+    </main>
 </body>
 </html>
