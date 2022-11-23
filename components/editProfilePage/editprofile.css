@@ -136,9 +136,9 @@ body{
     flex-direction: column;
     margin-top: 5%;
     font-family: 'Roboto', sans-serif;
-    width: 30%;
+    width: 50%;
     height: 12%;
-    border-radius: 7px;
+    border-radius: 7px; border: 1px solid black;
     background-color: #0216E6;
     color: white;
     text-align: center;
@@ -156,7 +156,19 @@ body{
 }
 
 #botaoUpar {
-    display: flex;
-    flex-direction: column;
-    color: white;
+    display: none;
+}
+
+#labelBotaoUpar {
+    display:flex; justify-content: center; align-items: center;
+    height: 10%;
+    background-color: blue;
+    font-family: Roboto; font-size: 16px; color: white;
+    font-weight: bold;
+    border: 1px solid black; border-radius: 7px;
+    cursor: pointer;
+}
+
+#labelBotaoUpar:hover {
+    background-color: #6975ad;
 }

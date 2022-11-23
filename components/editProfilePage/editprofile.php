@@ -35,6 +35,7 @@
                 <?php echo"<h1 class= 'exibindo'>" . get_data('nome') . "</h1>" ?>
                 <?php echo"<h1 class= 'bio'>" . get_data('bio') . "</h1>" ?>
                 <div id= 'esquerda_div_base'>
+                    <label id='labelBotaoUpar' for='botaoUpar'>Enviar Imagem</label>
                     <input id="botaoUpar" name='change_image_input' type= 'file'>
                     <a id="botaoVoltar" onclick='trocarDePagina("../profilePage/profile.php")'>Voltar</a>
                 </div>
